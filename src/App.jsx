@@ -16,7 +16,7 @@ function App() {
       <TaskProvider>
         <BrowserRouter>
           <Navbar />
-          <main className="px-3 md:px-40 py-5">
+          <main className="px-3 lg:px-40 py-5">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<LoginPage />} />

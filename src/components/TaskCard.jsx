@@ -11,9 +11,15 @@ function TaskCard({ task }) {
 
   return (
     <div className="bg-zinc-800 rounded-md p-7 shadow-md shadow-gray-700 space-y-2 hover:scale-105 transition my-5">
-      <header className="flex justify-between">
+      <header className="flex justify-between gap-3">
         <h1 className="text-2xl font-bold">{task.title}</h1>
         <div className="flex gap-2 items-center">
+          <Link
+            to={`/tasks/${task._id}`}
+            className="hover:text-blue-500 transition"
+          >
+            <MdEdit />
+          </Link>
           <button
             className="hover:text-red-500 transition"
             onClick={() => {
@@ -22,12 +28,6 @@ function TaskCard({ task }) {
           >
             <MdDelete />
           </button>
-          <Link
-            to={`/tasks/${task._id}`}
-            className="hover:text-blue-500 transition"
-          >
-            <MdEdit />
-          </Link>
         </div>
       </header>
       <p className="text-slate-300">{task.description}</p>

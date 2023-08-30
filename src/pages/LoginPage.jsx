@@ -24,7 +24,7 @@ function LoginPage() {
     <div className="flex justify-center items-center">
       <form
         onSubmit={onSubmit}
-        className="flex flex-col gap-5 bg-zinc-800 w-[400px] p-10 rounded-md shadow-md shadow-gray-600 my-32"
+        className="flex flex-col gap-5 bg-zinc-800 w-[340px] md:w-[400px] p-10 rounded-md shadow-md shadow-gray-600 my-32"
       >
         <h1 className="text-2xl text-center font-bold text-green-500">LOGIN</h1>
 

@@ -9,10 +9,10 @@ function TasksPage() {
     getTasks();
   }, []);
 
-  if (tasks.length === 0) return (<h1 className="text-xl my-40 text-center">No tasks papu :(</h1>)
+  if (tasks.length === 0) return (<h1 className="text-xl my-40 text-center">There is no task at the moment, add a new task!</h1>)
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
       {tasks.map((task) => (
         <TaskCard task={task} key={task._id}/>
       ))}
