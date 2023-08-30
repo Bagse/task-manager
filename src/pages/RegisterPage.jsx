@@ -21,7 +21,7 @@ function RegisterPage() {
   });
 
   return (
-    <div className="flex justify-center items-center my-32">
+    <div className="flex justify-center items-center my-24">
       <form
         onSubmit={onSubmit}
         className="flex flex-col gap-5 bg-zinc-800 w-[340px] md:w-[400px] p-10 rounded-md shadow-md shadow-gray-600 "
