@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import { TaskProvider } from "./context/TasksContext";
 import { ProtectedRoute } from "./routes";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               </Route>
             </Routes>
           </main>
+          <Footer />
         </BrowserRouter>
       </TaskProvider>
     </AuthProvider>

@@ -9,7 +9,7 @@ function Navbar() {
       <Link to={
         isAuthenticated ? "/tasks" : "/"
       }>
-        <h1 className="text-2xl md:text-3xl font-bold">Tasks Manager</h1>
+        <h1 className="text-xl md:text-3xl font-bold">Tasks Manager</h1>
       </Link>
       <ul className="flex gap-3 md:gap-5 text-lg items-center">
         {isAuthenticated ? (

@@ -10,21 +10,21 @@ function LoginPage() {
     formState: { errors },
   } = useForm();
   const { signin, errors: signinErrors, isAuthenticated } = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const onSubmit = handleSubmit((data) => {
     signin(data);
   });
 
   useEffect(() => {
-    if (isAuthenticated) navigate("/tasks")
-  }, [isAuthenticated])
+    if (isAuthenticated) navigate("/tasks");
+  }, [isAuthenticated]);
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center my-32">
       <form
         onSubmit={onSubmit}
-        className="flex flex-col gap-5 bg-zinc-800 w-[340px] md:w-[400px] p-10 rounded-md shadow-md shadow-gray-600 my-32"
+        className="flex flex-col gap-5 bg-zinc-800 w-[340px] md:w-[400px] p-10 rounded-md shadow-md shadow-gray-600 "
       >
         <h1 className="text-2xl text-center font-bold text-green-500">LOGIN</h1>
 
@@ -33,7 +33,7 @@ function LoginPage() {
             {error}
           </div>
         ))}
-        
+
         <input
           type="email"
           {...register("email", { required: true })}
@@ -61,7 +61,12 @@ function LoginPage() {
           Sign in
         </button>
 
-        <p className="text-gray-400 text-sm">Don't have an account? <Link to="/register" className="text-white hover:underline pl-2">Sign up</Link></p>
+        <p className="text-gray-400 text-sm">
+          Don't have an account?{" "}
+          <Link to="/register" className="text-white hover:underline pl-2">
+            Sign up
+          </Link>
+        </p>
       </form>
     </div>
   );
